@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           padding: 'var(--spacing-md) 0'
         }}>
           {/* Logo */}
-          <a href="#" style={{
+          <a href="#top" style={{
             fontSize: '1.5rem',
             fontWeight: '700',
             color: 'var(--primary-black)',
