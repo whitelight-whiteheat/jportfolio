@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/globals.css';
 import project1Image from '../assets/landingpage.png';
 
 const Projects: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-
   const projects = [
     {
       id: 1,
@@ -29,15 +27,6 @@ const Projects: React.FC = () => {
       featured: true
     }
   ];
-
-  const categories = [
-    { id: 'all', label: 'All Projects', count: projects.length },
-    { id: 'fullstack', label: 'Full-Stack', count: projects.filter(p => p.category === 'fullstack').length }
-  ];
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -91,7 +80,7 @@ const Projects: React.FC = () => {
           maxWidth: '1200px',
           margin: '0 auto'
         }}>
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <div
               key={project.id}
               style={{
