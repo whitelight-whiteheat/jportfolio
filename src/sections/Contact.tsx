@@ -140,7 +140,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
           </div>
-          
+
           {/* Social Links */}
           <div className="mb-lg">
             <h3 className="mb-md">Connect With Me</h3>
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Call to Action */}
           <div>
             <h3 className="mb-md">Ready to start a project?</h3>
